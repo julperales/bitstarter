@@ -12,8 +12,9 @@ app.get('/', function(request, response) {
 
 
 	content_buffer = fs.readFileSync('index.html', 'utf8');
-	content = "algo"
 
+
+	content = buffer.toString("algo");
 	response.send(content);
 });
 
