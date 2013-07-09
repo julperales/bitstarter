@@ -12,7 +12,7 @@ app.get('/', function(request, response) {
 
 
 	content_buffer = fs.readFileSync('index.html', 'utf8');
-	content = buffer.toString('utf8', content_buffer);
+	content = "algo"
 
 	response.send(content);
 });
