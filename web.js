@@ -8,14 +8,8 @@ app.get('/', function(request, response) {
 	var fs = require("fs");
 
 
-	var buffer = new Buffer (256, 'utf8');
-
-
-	content_buffer = fs.readFileSync('index.html', 'utf8');
-
-
-	content = buffer.toString("algo");
-	response.send(content);
+	var buffer = new Buffer (fs.readFileSync('index.html', 'utf8'));
+	response.send(buffer.toString());
 });
 
 var port = process.env.PORT || 5000;
